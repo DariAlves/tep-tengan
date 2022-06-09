@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+
+  <body>
+    <%- include('./partials/header.ejs') %>
+
+    <h1>Listar todos os livros</h1>
+
+    <div class="livros">
+      <% livros.forEach(livro => { %>
+      <div class="livro">
+        <div class="livro__img">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/pt/thumb/c/c0/Dune_2020.jpeg/250px-Dune_2020.jpeg"
+            alt=""
+          />
+        </div>
+        <h3><%- livro.titulo %></h3>
+        <p><%- livro.autor %></p>
+      </div>
+      <% }) %>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+
+    <%- include('./partials/footer.ejs') %>
+
+    <!-- Scripts -->
+    <!-- <script src="js/index.js"></script> -->
+  </body>
+</html>
